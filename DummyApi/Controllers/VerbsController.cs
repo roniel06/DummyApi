@@ -15,15 +15,15 @@ namespace DummyApi.Controllers
 		[HttpGet]
 		public async Task<IActionResult> Get([FromQuery] string obj)
 		{
-			if (obj == null) return BadRequest("Empty Obj");
+			if (string.IsNullOrEmpty(obj)) return BadRequest("Empty Obj");
 			return Ok(obj);
 		}
 
 		[HttpPost]
 		
 		public async Task<IActionResult> Post(string obj)
-		{		
-			if (obj == null) return BadRequest("Empty Obj");
+		{
+			if (string.IsNullOrEmpty(obj)) return BadRequest("Empty Obj");
 			return Ok(obj);
 		}
 
@@ -31,7 +31,7 @@ namespace DummyApi.Controllers
 		[HttpPut]
 		public async Task<IActionResult> Put(string obj)
 		{
-			if (obj == null) return BadRequest("Empty Obj");
+			if (string.IsNullOrEmpty(obj)) return BadRequest("Empty Obj");
 			return Ok(obj);
 		}
 
@@ -39,7 +39,7 @@ namespace DummyApi.Controllers
 		[HttpDelete]
 		public async Task<IActionResult> Delete(string obj)
 		{
-			if (obj == null) return BadRequest("Empty Obj");
+			if (string.IsNullOrEmpty(obj)) return BadRequest("Empty Obj");
 			return Ok(obj);
 		}
 	}
